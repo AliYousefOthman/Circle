@@ -2,7 +2,8 @@ version: 2.1
 
 jobs:
   build:
-    machine: True
+    machine:
+      - image: windows-default
     steps:
       - checkout
-      - run: echo "The first hello"
+      - run: Write-Host 'Hello, Windows'
