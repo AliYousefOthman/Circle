@@ -1,13 +1,16 @@
 version: 2.1
 
+orbs:
+  win: circleci/windows@5.0
+
 jobs:
   build:
-    machine:
-      - image: windows-default
+    exexutor: win/default
     steps:
       - checkout
-      - run: Write-Host 'Hello, Windows'
+      - run : Write-Host 'Hello, Windows'
 
 workflow:
-  URR:
-    - build
+  RGG:
+    jobs:
+      - build
