@@ -5,12 +5,12 @@ orbs:
 
 jobs:
   build:
-    exexutor: win/default
+    executor: win/default
     steps:
       - checkout
       - run : Write-Host 'Hello, Windows'
 
-workflow:
+workflows:
   RGG:
     jobs:
       - build
