@@ -7,3 +7,7 @@ jobs:
     steps:
       - checkout
       - run: Write-Host 'Hello, Windows'
+
+workflow:
+  URR:
+    - build
